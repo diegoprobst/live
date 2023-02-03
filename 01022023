@@ -1,8 +1,11 @@
 var
 opcao: literal
-valor: real
+quilometros, metros, metroscub, litros: real
 inicio
-valor <- 0
+quilometros <- 0
+metros <- 0
+metroscub <- 0
+litros <- 0
 
 repita
    escreval("Digite 1 para converter quilômetros em metros")
@@ -11,15 +14,15 @@ repita
    leia (opcao)
    se opcao = "1" entao
       escreval("Digite o valor em quilômetros a ser convertido em metros")
-      leia (valor)
-      valor <- valor * 1000
-      escreval(valor / 1000, " quilômetro(s) equivale(m) a", valor, " metro(s)")
+      leia (quilometros)
+metros <- quilometros * 1000
+      escreval(quilometros, " quilômetro(s) equivale(m) a", metros, " metro(s)")
    senao
       se opcao = "2" entao
          escreval("Digite o valor em metros cúbicos a ser convertido em litros")
-         leia (valor)
-         valor <- valor * 1000
-         escreval(valor / 1000, " metro(s)cúbico(s) equivale(m) a", valor, " litro(s)")
+         leia (metroscub)
+ litros <- metroscub * 1000
+         escreval(metroscub, " metro(s)cúbico(s) equivale(m) a", litros, " litro(s)")
       fimse
    fimse
 ate opcao = "3"
